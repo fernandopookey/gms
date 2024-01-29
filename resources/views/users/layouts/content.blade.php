@@ -59,7 +59,7 @@
                     <nav class="nav-menu">
                         <ul>
                             <li class="active"><a href="./index.html">Yuzi</a></li>
-                            <li><a href="./about-us.html">About Us</a></li>
+                            <li><a href="./about-us.html">Tentang Kami</a></li>
                             <li><a href="./class-details.html">Classes</a></li>
                             <li><a href="./services.html">Services</a></li>
                             <li><a href="./team.html">Our Team</a></li>
