@@ -11,7 +11,7 @@ class HomeController extends Controller
     {
         $data = [
             'title'                             => 'Dashboard Admin GYM',
-            'content'                           => 'users/index'
+            'content'                           => 'users/home/index'
         ];
         return view('users.layouts.wrapper', $data);
     }
