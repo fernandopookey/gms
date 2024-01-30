@@ -277,7 +277,6 @@
         </div>
     </div>
 </div>
-<!-- Gallery Section End -->
 
 <!-- Team Section Begin -->
 <section class="team-section spad">
@@ -320,7 +319,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="ts-item set-bg" data-setbg="{{ asset('gym/img/team/team-4.jpg') }}">
+                    <div class="ts-item set-bg" data-setbg="{{ asset('gym/img/team/team-4.jp') }}g">
                         <div class="ts_text">
                             <h4>Athart Rachel</h4>
                             <span>Gym Trainer</span>
