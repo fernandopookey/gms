@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\MemberController;
 use App\Http\Controllers\Admin\PersonalTrainerController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\User\HomeController;
@@ -23,7 +24,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/admin', [DashboardController::class, 'index'])->name('dashboard');
-Route::get('/personal-trainerr', [PersonalTrainerController::class, 'index'])->name('personal-trainer');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
