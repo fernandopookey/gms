@@ -28,6 +28,8 @@
     <link rel="stylesheet" href="{{ asset('addmin/plugins/daterangepicker/daterangepicker.css') }}">
     <!-- summernote -->
     <link rel="stylesheet" href="{{ asset('addmin/plugins/summernote/summernote-bs4.min.css') }}">
+
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
