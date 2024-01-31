@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PaketMemberController;
 use App\Http\Controllers\User\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,5 +33,17 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::get('/paket-member', [App\Http\Controllers\Admin\PaketMemberController::class, 'index'])->name('daftarPaketMember');
+
+Route::get('paket-member-create', [App\Http\Controllers\Admin\PaketMemberController::class, 'create'])->name('createPaketMember');
+
+Route::post('paket-member-create', [App\Http\Controllers\Admin\PaketMemberController::class, 'store'])->name('storePaketMember');
+
+Route::get('paket-member-{id}-edit', [App\Http\Controllers\Admin\PaketMemberController::class, 'edit'])->name('editPaketMember');
+
+Route::post('paket-member-{id}-edit', [App\Http\Controllers\Admin\PaketMemberController::class, 'update'])->name('updatePaketMember');
+
+Route::get('paket-member-{id}-delete', [App\Http\Controllers\Admin\PaketMemberController::class, 'destroy'])->name('deletePaketMember');
 
 require __DIR__ . '/auth.php';
