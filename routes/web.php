@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\MemberController;
 use App\Http\Controllers\Admin\PersonalTrainerController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\User\HomeController;
+use App\Http\Controllers\User\TeamController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -45,6 +46,9 @@ Route::get('/personal-trainer-{id}', [PersonalTrainerController::class, 'edit'])
 
 // Destroy
 Route::get('/personal-trainer-delete-{id}', [App\Http\Controllers\Admin\PersonaltrainerController::class, 'destroy'])->name('deletePersonalTrainer');
+
+// Team page
+Route::get('/teams', [TeamController::class, 'index'])->name('teams');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

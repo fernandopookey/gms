@@ -1,28 +1,32 @@
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
+{{-- <div class="content-wrapper"> --}}
     <!-- Content Header (Page header) -->
+
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1 class="m-0">{{ isset($title) ? $title : '' }}</h1>
-                </div><!-- /.col -->
+                </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item active">Personal Trainer</li>
                     </ol>
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- /.content-header -->
+
 <div class="card">
     <div class="card-header text-right">
-        <a href="{{ route('createPersonalTrainer') }}" class="btn btn-primary" role="button">Add Trainer</a>
+        <a href="{{ route('createPersonalTrainer') }}" class="btn btn-info mb-4" role="button">Add Trainer</a>
     </div>
-    <div class="card-body">
-        <table class="table table-hover mb-0">
+    <div class="card-body shadow">
+        <div class="table-responsive full-data">
+            <table class="table-responsive-lg table display dataTablesCard student-tab dataTable"
+            id="myTable">
+        
             <thead>
                 <tr>
                     <th>No.</th>
@@ -51,5 +55,6 @@
                 @endforeach
             </tbody>
         </table>
-    </div>
-</div>
+        </div>
+        <table class="table table-hover mb-0">
+    

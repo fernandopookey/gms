@@ -130,6 +130,12 @@
   <script src="{{ asset('gym/js/owl.carousel.min.js') }}"></script>
   <script src="{{ asset('gym/js/main.js') }}"></script>
 
+  <script>
+    function redirectToHomeWithTeam() {
+        window.location.href = "{{ route('home') }}#team";
+    }
+  </script>
+
 
 
   </body>

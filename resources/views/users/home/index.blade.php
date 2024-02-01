@@ -279,16 +279,15 @@
 </div>
 
 <!-- Team Section Begin -->
-<section class="team-section spad">
+<section class="team-section spad" id="team">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="team-title">
                     <div class="section-title">
                         <span>Our Team</span>
-                        <h2>TRAIN WITH EXPERTS</h2>
+                        <h2>The Builders</h2>
                     </div>
-                    <a href="#" class="primary-btn btn-normal appoinment-btn">appointment</a>
                 </div>
             </div>
         </div>
@@ -297,48 +296,24 @@
                 <div class="col-lg-4">
                     <div class="ts-item set-bg" data-setbg="{{ asset('gym/img/team/team-1.jpg') }}">
                         <div class="ts_text">
-                            <h4>Athart Rachel</h4>
-                            <span>Gym Trainer</span>
+                            <h4>Fernando</h4>
+                            <span>Fullstack Team</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="ts-item set-bg" data-setbg="{{ asset('gym/img/team/team-2.jpg') }}">
                         <div class="ts_text">
-                            <h4>Athart Rachel</h4>
-                            <span>Gym Trainer</span>
+                            <h4>Yuzika</h4>
+                            <span>Fullstack Team</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="ts-item set-bg" data-setbg="{{ asset('gym/img/team/team-3.jpg') }}">
                         <div class="ts_text">
-                            <h4>Athart Rachel</h4>
-                            <span>Gym Trainer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="ts-item set-bg" data-setbg="{{ asset('gym/img/team/team-4.jp') }}g">
-                        <div class="ts_text">
-                            <h4>Athart Rachel</h4>
-                            <span>Gym Trainer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="ts-item set-bg" data-setbg="{{ asset('gym/img/team/team-5.jpg') }}">
-                        <div class="ts_text">
-                            <h4>Athart Rachel</h4>
-                            <span>Gym Trainer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="ts-item set-bg" data-setbg="{{ asset('gym/img/team/team-6.jpg') }}">
-                        <div class="ts_text">
-                            <h4>Athart Rachel</h4>
-                            <span>Gym Trainer</span>
+                            <h4>Jatmiko</h4>
+                            <span>Fullstack Team</span>
                         </div>
                     </div>
                 </div>

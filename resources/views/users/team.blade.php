@@ -68,7 +68,7 @@
                                     <li><a href="./about-us.html">About us</a></li>
                                     <li><a href="./class-timetable.html">Classes timetable</a></li>
                                     <li><a href="./bmi-calculator.html">Bmi calculate</a></li>
-                                    <li><a href="./team.html">Our team</a></li>
+                                    <li><a href="./team.blade.php">Our team</a></li>
                                     <li><a href="./gallery.html">Gallery</a></li>
                                     <li><a href="./blog.html">Our blog</a></li>
                                     <li><a href="./404.html">404</a></li>
@@ -108,7 +108,7 @@
                         <div class="col-lg-6 offset-lg-6">
                             <div class="hi-text">
                                 <span>Shape your body</span>
-                                <h1>Be <strong>strong</strong> traning hard</h1>
+                                <h1>Be <strong>team</strong> traning hard</h1>
                                 <a href="#" class="primary-btn">Get info</a>
                             </div>
                         </div>
