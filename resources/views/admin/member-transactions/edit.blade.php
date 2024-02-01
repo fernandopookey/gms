@@ -1,8 +1,9 @@
 <div class="row">
     <div class="card">
         <div class="card-body">
-            <form action="{{ route('member.store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('member.update', $member->id) }}" method="POST" enctype="multipart/form-data">
                 <div class="modal-body">
+                    @method('PUT')
                     @csrf
                     @if ($errors->any())
                         <div class="alert alert-danger">
@@ -17,75 +18,59 @@
                         <div class="col-xl-6">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Full Name</label>
-                                <input type="text" name="name" value="{{ old('name') }}" class="form-control"
-                                    id="exampleFormControlInput1" autocomplete="off" required>
+                                <input type="text" name="full_name" value="{{ $member->full_name }}"
+                                    class="form-control" id="exampleFormControlInput1" autocomplete="off" required>
                             </div>
                         </div>
                         <div class="col-xl-6">
                             <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Email</label>
-                                <input type="text" name="email" value="{{ old('email') }}" class="form-control"
-                                    id="exampleFormControlInput1" autocomplete="off" required>
+                                <label for="exampleFormControlInput1" class="form-label">Member Code</label>
+                                <div class="d-flex">
+                                    <input type="text" name="member_code" value="{{ $member->member_code }}"
+                                        value="{{ $member->member_code }}" class="form-control"
+                                        id="exampleFormControlInput1" autocomplete="off" required>
+                                </div>
                             </div>
                         </div>
                         <div class="col-xl-6">
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Password</label>
-                                <input type="text" name="password" value="{{ old('password') }}" class="form-control"
-                                    id="exampleFormControlInput1" autocomplete="off" required>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-6">
-                            <div class="mb-3">
-                                <label for="role" class="form-label">User Role</label>
-                                <select name="role" id="role" class="form-select form-control" required>
-                                    <option value="MEMBER" selected>Member</option>
-                                    <option value="PT">Personal Trainer</option>
-                                    <option value="CS">Customer Service</option>
-                                    <option value="ADMIN">Admin</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-6" id="memberFieldsGender">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Gender</label>
-                                <select name="gender" class="form-control" aria-label="Default select example">
-                                    {{-- <option disabled selected value>
-                                        <- Choose ->
-                                    </option> --}}
+                                <select name="gender" class="form-control" aria-label="Default select example"
+                                    required>
+                                    {{-- <option disabled selected value> --}}
+                                    <option value="{{ $member->id }}">{{ $member->gender }}</option>
+                                    {{-- </option> --}}
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="col-xl-6" id="memberFieldsPhoneNumber">
+                        <div class="col-xl-6">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
-                                <input type="text" name="phone_number" value="{{ old('phone_number') }}"
-                                    class="form-control" id="exampleFormControlInput1" autocomplete="off">
+                                <input type="text" name="phone_number" value="{{ $member->phone_number }}"
+                                    class="form-control" id="exampleFormControlInput1" autocomplete="off" required>
                             </div>
                         </div>
-                        <div class="col-xl-6" id="memberFieldsAddress">
+                        <div class="col-xl-6">
                             <div class="mb-3">
                                 <label for="exampleFormControlTextarea1" class="form-label text-primary">
                                     Address
                                 </label>
                                 <textarea class="form-control" name="address" id="exampleFormControlTextarea1" rows="6"
-                                    placeholder="Enter Address">{{ old('address') }}</textarea>
+                                    placeholder="Enter Address">{{ $member->address }}</textarea>
                             </div>
                         </div>
-                        <div class="col-xl-6" id="memberFieldsDescription">
+                        <div class="col-xl-6">
                             <div class="mb-3">
                                 <label for="exampleFormControlTextarea1" class="form-label text-primary">
                                     Description
                                 </label>
                                 <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="6"
-                                    placeholder="Enter Description">{{ old('description') }}</textarea>
+                                    placeholder="Enter Description">{{ $member->description }}</textarea>
                             </div>
                         </div>
-                        <div class="col-xl-6" id="memberFieldsPhoto">
+                        <div class="col-xl-6">
                             <div class="mb-3">
                                 <label for="formFile" class="form-label">Photo</label>
                                 <input class="form-control" type="file" name="photos" onchange="loadFile(event)"
@@ -96,7 +81,7 @@
                     </div>
                 </div>
                 <div class="">
-                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="submit" class="btn btn-primary">Update</button>
                     <a href="{{ route('member.index') }}" class="btn btn-secondary light">Cancel</a>
                 </div>
             </form>

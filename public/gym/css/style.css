@@ -114,6 +114,7 @@ ol {
 -----------------------*/
 
 .section-title {
+	margin-top: 45px;
 	margin-bottom: 45px;
 	text-align: center;
 }
@@ -324,13 +325,19 @@ ol {
 -----------------------*/
 
 .header-section {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	padding: 0 15px;
-	padding-top: 55px;
-	z-index: 99;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding-top: 25px;
+	padding-bottom: 25px;
+    z-index: 99;
+    transition: background-color 0.3s ease; /* Efek transisi untuk perubahan warna latar belakang */
+}
+
+.header-black {
+    background-color: black; /* Warna latar belakang hitam saat di-scroll ke bawah */
+    color: white; /* Warna teks putih untuk kontras */
 }
 
 .logo a {
@@ -393,10 +400,6 @@ ol {
 	opacity: 1;
 }
 
-.nav-menu ul li:hover>a {
-	color: #f36100;
-}
-
 .nav-menu ul li:hover>a:after {
 	opacity: 1;
 }
@@ -407,6 +410,7 @@ ol {
 }
 
 .nav-menu ul li a {
+	text-decoration: none;
 	color: #ffffff;
 	display: block;
 	font-size: 15px;
@@ -419,6 +423,10 @@ ol {
 	-webkit-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
+}
+
+.nav-menu ul li a:hover {
+	color: #f36100;
 }
 
 .nav-menu ul li a:after {
@@ -3255,3 +3263,21 @@ ol {
 		font-size: 28px;
 	}
 }
+
+.modal-content {
+    background: radial-gradient(circle at top left, #181818 70%, #b98968);
+	border-radius: 20px;
+}
+
+.modal-body p {
+	color: white;
+	font-weight: 400;
+	font-size: 17px;
+}
+
+.modal-title {
+	color: #f36100;
+	font-weight: 600;
+}
+
+

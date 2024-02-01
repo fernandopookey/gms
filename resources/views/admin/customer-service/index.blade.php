@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 <div class="row">
     <div class="col-xl-12">
         <div class="row">
@@ -84,48 +81,4 @@
             <!--/column-->
         </div>
     </div>
-<<<<<<< HEAD
 </div>
-=======
-    <!-- /.content-header -->
->>>>>>> 8b1b25cc4006a8c21156f283a99032982045a288
-<div class="card">
-    <div class="card-header text-right">
-        <a href="{{ route('createPersonalTrainer') }}" class="btn btn-info mb-4" role="button">Add Trainer</a>
-    </div>
-    <div class="card-body shadow">
-        <div class="table-responsive full-data">
-            <table class="table-responsive-lg table display dataTablesCard student-tab dataTable"
-            id="myTable">
-        
-            <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>Trainer Name</th>
-                    <th>Phone No.</th>
-                    <th>Gender</th>
-                    <th>Address</th>
-                    <th>Action</th>
-
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($personal_trainers as $personal_trainer)
-                <tr>
-                    <td> {{ $loop->index + 1 }}</td>
-                    <td> {{ $personal_trainer->full_name }}</td>
-                    <td> {{ $personal_trainer->phone_number }}</td>
-                    <td> {{ $personal_trainer->gender }}</td>
-                    <td> {{ $personal_trainer->address }}</td>
-                    <td>
-                        {{-- <a href="{{route('editPersonalTrainer', ['id' => $personal_trainer->id])}}" class="btn btn-warning btn-sm" role="button">Edit</a> --}}
-                        <a href="{{ route('personal-trainer.edit', ['id' => $personal_trainer->id]) }}" class="btn btn-warning btn-sm" role="button">Edit</a>
-                        <a href="{{ route('deletePersonalTrainer', ['id' => $personal_trainer->id])}}" class="btn btn-danger btn-sm" role="button">Delete</a>
-                    </td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
-    </div>
-</div>
->>>>>>> 73cf6c69eb5d1a1fd51edb67521cad4d3a446a98

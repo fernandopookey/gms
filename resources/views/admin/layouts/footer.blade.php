@@ -15,6 +15,8 @@
   </div>
   <!-- ./wrapper -->
 
+  @include('sweetalert::alert')
+
   <!-- jQuery -->
   <script src="{{ asset('addmin/plugins/jquery/jquery.min.js') }}"></script>
   <!-- jQuery UI 1.11.4 -->
@@ -49,6 +51,39 @@
   {{-- <script src="{{ 'addmin/dist/js/demo.js' }}"></script> --}}
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
   <script src="{{ 'addmin/dist/js/pages/dashboard.js' }}"></script>
+
+  
+  @yield('addJavascript')
+
+  
+
+  <script>
+    $(document).ready(function() {
+    var currentUrl = window.location.href;
+    var sidebarLinks = $('.nav-sidebar a');
+
+    sidebarLinks.each(function() {
+        var linkUrl = $(this).attr('href');
+
+        if (currentUrl.includes(linkUrl)) {
+            $(this).addClass('active');
+            $(this).closest('.nav-treeview').siblings('.nav-link').addClass('active');
+            $(this).closest('.has-treeview').addClass('menu-open');
+            return false; // Stop iteration once a matching link is found
+        }
+    });
+});
+  </script>
+
+  <script src="//code.jquery.com/jquery-3.7.0.js"></script>
+  <script src="//cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+  <script src="//cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+  <script>
+    new DataTable('#example');
+  </script>
+
+
+
 
   <script src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -95,6 +130,55 @@
           })
       }
   </script>
+
+<<<<<<< HEAD
+=======
+  <script>
+      var currentUrl = window.location.href;
+
+      var navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(function(navLink) {
+          if (navLink.href === currentUrl) {
+              navLink.classList.add('active');
+
+              var parentLi = navLink.closest('.nav-item');
+              if (parentLi) {
+                  parentLi.classList.add('menu-open');
+              }
+          }
+      });
+  </script>
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          var memberFieldsGender = document.getElementById('memberFieldsGender');
+          var memberFieldsPhoneNumber = document.getElementById('memberFieldsPhoneNumber');
+          var memberFieldsAddress = document.getElementById('memberFieldsAddress');
+          var memberFieldsDescription = document.getElementById('memberFieldsDescription');
+          var memberFieldsPhoto = document.getElementById('memberFieldsPhoto');
+          var adminCSFields = document.getElementById('adminCSFields');
+
+          document.getElementById('role').addEventListener('change', function() {
+              if (this.value === 'MEMBER') {
+                  memberFieldsGender.style.display = 'block';
+                  memberFieldsPhoneNumber.style.display = 'block';
+                  memberFieldsAddress.style.display = 'block';
+                  memberFieldsDescription.style.display = 'block';
+                  memberFieldsPhoto.style.display = 'block';
+                  adminCSFields.style.display = 'none';
+              } else {
+                  memberFieldsGender.style.display = 'none';
+                  memberFieldsPhoneNumber.style.display = 'none';
+                  memberFieldsAddress.style.display = 'none';
+                  memberFieldsDescription.style.display = 'none';
+                  memberFieldsPhoto.style.display = 'none';
+                  adminCSFields.style.display = 'block';
+              }
+          });
+      });
+  </script>
+
+>>>>>>> 8b1b25cc4006a8c21156f283a99032982045a288
   </body>
 
   </html>

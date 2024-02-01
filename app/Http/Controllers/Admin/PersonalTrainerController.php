@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use App\Models\PersonalTrainer;
+use App\Http\Controllers\Controller;use App\Models\PersonalTrainer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,6 +15,7 @@ class PersonalTrainerController extends Controller
             'title' => 'Personal Trainer',
             'content' => 'admin/personal-trainer/index',
             'personal_trainers' => PersonalTrainer::all(),
+>>>>>>> 73cf6c69eb5d1a1fd51edb67521cad4d3a446a98
         ];
 
         // Mengembalikan view dengan data yang telah diset
