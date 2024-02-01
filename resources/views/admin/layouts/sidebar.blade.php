@@ -43,13 +43,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="./index.html" class="nav-link">
+                        <a href="{{route('member.index')}}" class="nav-link">
                             <i class="fas fa-users nav-icon"></i>
                             <p>Member</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="./index2.html" class="nav-link">
+                        <a href="{{route('personal-trainer-index')}}" class="nav-link">
                             <i class="fas fa-user nav-icon"></i>
                             <p>Personal Trainer</p>
                         </a>
@@ -61,7 +61,8 @@
                         </a>
                     </li>
                 </ul>
-               </li>            
+            </li>
+            
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

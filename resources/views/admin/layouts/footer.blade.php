@@ -48,9 +48,10 @@
   <!-- AdminLTE App -->
   <script src="{{ 'addmin/dist/js/adminlte.js' }}"></script>
   <!-- AdminLTE for demo purposes -->
-  <script src="{{ 'addmin/dist/js/demo.js' }}"></script>
+  {{-- <script src="{{ 'addmin/dist/js/demo.js' }}"></script> --}}
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
   <script src="{{ 'addmin/dist/js/pages/dashboard.js' }}"></script>
+
   
   @yield('addJavascript')
 
@@ -81,6 +82,54 @@
     new DataTable('#example');
   </script>
 
+
+
+
+  <script src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+      $(document).ready(function() {
+          let table = new DataTable('#myTable', {
+              // Code below useless
+              order: [
+                  [1, 'asc']
+              ] // 1 is the column index, 'asc' is for ascending order
+          });
+      });
+  </script>
+
+  <script>
+      confirmDelete = function(button) {
+          var url = $(button).data('url');
+          swal({
+              'title': 'Konfirmasi Hapus',
+              'text': 'Apakah Kamu Ingin Menghapus Data Ini ?',
+              'dangerMode': true,
+              'buttons': true
+          }).then(function(value) {
+              if (value) {
+                  window.location = url;
+              }
+          });
+      }
+  </script>
+
+  <script src="{{ asset('js/sweetalert.min.js') }}"></script>
+  <script>
+      confirmDelete = function(button) {
+          var url = $(button).data('url');
+          swal({
+              'title': 'Konfirmasi Hapus',
+              'text': 'Apakah Kamu Yakin Ingin Menghapus Data Ini?',
+              'dangermode': true,
+              'buttons': true
+          }).then(function(value) {
+              if (value) {
+                  window.location = url;
+              }
+          })
+      }
+  </script>
 
   </body>
 
