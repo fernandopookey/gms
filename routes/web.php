@@ -29,6 +29,26 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 // Route::get('/', [HomeController::class, 'index'])->name('home');
 // Route::get('/admin', [DashboardController::class, 'index'])->name('dashboard');
 
+// Create Personal Trainer
+Route::get('/personal-trainer-create', [App\Http\Controllers\Admin\PersonalTrainerController::class, 'create'])->name('createPersonalTrainer');
+
+// route untuk menampilkan view edit Personal Trainer
+Route::get('/personal-trainer/{id}/edit', [App\Http\Controllers\Admin\PersonalTrainerController::class, 'edit'])->name('editPersonalTrainer');
+
+// Store Personal Trainer
+Route::post('/personal-trainer-create', [App\Http\Controllers\Admin\PersonalTrainerController::class, 'store'])->name('storePersonalTrainer');
+
+// route untuk menyimpan perubahan kategori, perhatikan bahwa fungsi routenya adalah post
+// Route::post('/personal-trainer/{id}/edit', [App\Http\Controllers\Admin\PersonalTrainerController::class, 'update'])->name('updatePersonalTrainer');
+
+Route::resource('personal-trainer', PersonalTrainerController::class);
+
+// Edit Personal Trainer
+Route::get('/personal-trainer-{id}', [PersonalTrainerController::class, 'edit'])->name('personal-trainer.edit');
+
+// Destroy
+Route::get('/personal-trainer-delete-{id}', [App\Http\Controllers\Admin\PersonaltrainerController::class, 'destroy'])->name('deletePersonalTrainer');
+
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
