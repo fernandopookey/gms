@@ -15,23 +15,30 @@
         </div>
         <nav class="canvas-menu mobile-menu">
             <ul>
+<<<<<<< HEAD
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./about-us.html">About Us</a></li>
                 <li><a href="./classes.html">Classes</a></li>
                 <li><a href="./services.html">Services</a></li>
-                <li><a href="./team.html">Our Team</a></li>
+                <li onclick="redirectToHomeWithTeam()"><a>Our team</a></li>
                 <li><a href="#">Pages</a>
                     <ul class="dropdown">
                         <li><a href="./about-us.html">About us</a></li>
                         <li><a href="./class-timetable.html">Classes timetable</a></li>
                         <li><a href="./bmi-calculator.html">Bmi calculate</a></li>
-                        <li><a href="./team.html">Our team</a></li>
+                        <li onclick="redirectToHomeWithTeam()"><a>Our team</a></li>
                         <li><a href="./gallery.html">Gallery</a></li>
                         <li><a href="./blog.html">Our blog</a></li>
                         <li><a href="./404.html">404</a></li>
                     </ul>
                 </li>
                 <li><a href="./contact.html">Contact</a></li>
+=======
+                <li class="active"><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="./team.html">Our Team</a></li>
+                <li><a href="./services.html">Login</a></li>
+>>>>>>> origin
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -58,23 +65,32 @@
                 <div class="col-lg-6">
                     <nav class="nav-menu">
                         <ul>
+<<<<<<< HEAD
                             <li class="active"><a href="./index.html">Home</a></li>
                             <li><a href="./about-us.html">About Us</a></li>
                             <li><a href="./class-details.html">Classes</a></li>
                             <li><a href="./services.html">Services</a></li>
-                            <li><a href="./team.html">Our Team</a></li>
+                            <li onclick="redirectToHomeWithTeam()"><a>Our team</a></li>
                             <li><a href="#">Pages</a>
                                 <ul class="dropdown">
                                     <li><a href="./about-us.html">About us</a></li>
                                     <li><a href="./class-timetable.html">Classes timetable</a></li>
                                     <li><a href="./bmi-calculator.html">Bmi calculate</a></li>
-                                    <li><a href="./team.html">Our team</a></li>
+                                    <li onclick="redirectToHomeWithTeam()"><a>Our team</a></li>
                                     <li><a href="./gallery.html">Gallery</a></li>
                                     <li><a href="./blog.html">Our blog</a></li>
                                     <li><a href="./404.html">404</a></li>
                                 </ul>
                             </li>
                             <li><a href="./contact.html">Contact</a></li>
+=======
+                            <li onclick="redirectToHomeWithHero()"><a href="#home">Home</a></li>
+                            <li onclick="redirectToHomeWithAbout()"><a href="#about">About Us</a></li>
+                            <li onclick="redirectToHomeWithClass()"><a href="#ourclass">Our Class</a></li>
+                            <li onclick="redirectToHomeWithPackages()"><a href="#packages">Packages</a></li>
+                            <li><a href="#ourteam">Our Team</a></li>
+                            <li><a href="#login">Login</a></li>
+>>>>>>> origin
                         </ul>
                     </nav>
                 </div>
@@ -98,3 +114,4 @@
         </div>
     </header>
     <!-- Header End -->
+    

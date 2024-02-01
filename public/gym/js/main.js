@@ -171,4 +171,45 @@
         });
     });
 
+    $(document).ready(function () {
+        // Fungsi untuk menambahkan kelas "active" pada elemen yang diklik
+        $('.nav-menu ul li').on('click', function () {
+            // Menghapus kelas "active" dari semua elemen
+            $('.nav-menu ul li').removeClass('active');
+            // Menambahkan kelas "active" pada elemen yang diklik
+            $(this).addClass('active');
+        });
+    });    
+
+    function toggleHeaderBackground() {
+        var scrollPosition = $(window).scrollTop();
+
+        // Jika scroll melebihi 100px dari atas
+        if (scrollPosition > 100) {
+            $('.header-section').addClass('header-black');
+        } else {
+            $('.header-section').removeClass('header-black');
+        }
+    }
+
+    $(window).on('scroll', function () {
+        toggleHeaderBackground();
+    }); 
+
+    $(document).ready(function () {
+        // Fungsi untuk menyesuaikan offset navbar saat melakukan navigasi ke section
+        $('.nav-menu a').on('click', function (e) {
+            if (this.hash !== '') {
+                e.preventDefault();
+    
+                const hash = this.hash;
+    
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top - $('.header-section').outerHeight()
+                }, 0); // Mengatur durasi animasi menjadi 0 untuk menghapus delay
+            }
+        });
+    });       
+
 })(jQuery);
+

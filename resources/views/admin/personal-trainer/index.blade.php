@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 <div class="row">
     <div class="col-xl-12">
         <div class="row">
@@ -85,12 +88,16 @@
 </div>
 =======
     <!-- /.content-header -->
+>>>>>>> 8b1b25cc4006a8c21156f283a99032982045a288
 <div class="card">
     <div class="card-header text-right">
-        <a href="{{ route('createPersonalTrainer') }}" class="btn btn-primary" role="button">Add Trainer</a>
+        <a href="{{ route('createPersonalTrainer') }}" class="btn btn-info mb-4" role="button">Add Trainer</a>
     </div>
-    <div class="card-body">
-        <table class="table table-hover mb-0">
+    <div class="card-body shadow">
+        <div class="table-responsive full-data">
+            <table class="table-responsive-lg table display dataTablesCard student-tab dataTable"
+            id="myTable">
+        
             <thead>
                 <tr>
                     <th>No.</th>

@@ -1,19 +1,14 @@
 <div class="row">
     <div class="col-xl-12">
-        <div class="row">
-            <form action="#" method="POST" id="deleteMembersForm">
-                @csrf
-                {{-- @method('delete') --}}
-                <div class="col-xl-12">
-                    <div class="page-title flex-wrap justify-content-between">
-                        {{-- <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal"
-                            data-bs-target=".bd-example-modal-lg">+ New Member</button> --}}
-                        <a href="{{ route('member.create') }}" class="btn btn-info mb-4">Add New</a>
-                        {{-- <a href="{{ route('member-report') }}" target="_blank" class="btn btn-info">Print PDF</a> --}}
-                    </div>
+        <form action="#" method="POST" id="deleteMembersForm">
+            @csrf
+            {{-- @method('delete') --}}
+            
+            <div class="card">
+                <div class="card-header text-right">
+                    <a href="{{ route('member.create') }}" class="btn btn-info mb-4">Add New</a>
                 </div>
-                <!--column-->
-                <div class="col-xl-12 wow fadeInUp" data-wow-delay="1.5s">
+                <div class="card-body shadow">
                     <div class="table-responsive full-data">
                         <table class="table-responsive-lg table display dataTablesCard student-tab dataTable"
                             id="myTable">
@@ -77,8 +72,10 @@
                         </table>
                     </div>
                 </div>
-            </form>
-            <!--/column-->
-        </div>
+            </div>
+        </form>
     </div>
 </div>
+
+
+
