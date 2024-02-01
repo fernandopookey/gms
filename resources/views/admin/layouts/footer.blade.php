@@ -131,6 +131,54 @@
       }
   </script>
 
+<<<<<<< HEAD
+=======
+  <script>
+      var currentUrl = window.location.href;
+
+      var navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(function(navLink) {
+          if (navLink.href === currentUrl) {
+              navLink.classList.add('active');
+
+              var parentLi = navLink.closest('.nav-item');
+              if (parentLi) {
+                  parentLi.classList.add('menu-open');
+              }
+          }
+      });
+  </script>
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          var memberFieldsGender = document.getElementById('memberFieldsGender');
+          var memberFieldsPhoneNumber = document.getElementById('memberFieldsPhoneNumber');
+          var memberFieldsAddress = document.getElementById('memberFieldsAddress');
+          var memberFieldsDescription = document.getElementById('memberFieldsDescription');
+          var memberFieldsPhoto = document.getElementById('memberFieldsPhoto');
+          var adminCSFields = document.getElementById('adminCSFields');
+
+          document.getElementById('role').addEventListener('change', function() {
+              if (this.value === 'MEMBER') {
+                  memberFieldsGender.style.display = 'block';
+                  memberFieldsPhoneNumber.style.display = 'block';
+                  memberFieldsAddress.style.display = 'block';
+                  memberFieldsDescription.style.display = 'block';
+                  memberFieldsPhoto.style.display = 'block';
+                  adminCSFields.style.display = 'none';
+              } else {
+                  memberFieldsGender.style.display = 'none';
+                  memberFieldsPhoneNumber.style.display = 'none';
+                  memberFieldsAddress.style.display = 'none';
+                  memberFieldsDescription.style.display = 'none';
+                  memberFieldsPhoto.style.display = 'none';
+                  adminCSFields.style.display = 'block';
+              }
+          });
+      });
+  </script>
+
+>>>>>>> 8b1b25cc4006a8c21156f283a99032982045a288
   </body>
 
   </html>

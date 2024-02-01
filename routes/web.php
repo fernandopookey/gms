@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\Admin\CustomerServiceController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\MemberController;
+use App\Http\Controllers\Admin\MemberTransactionsController;
+use App\Http\Controllers\Admin\MyPackageController;
 use App\Http\Controllers\Admin\PersonalTrainerController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PaketMemberController;
@@ -77,11 +80,20 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('member', MemberController::class);
     Route::get('/member-create', [MemberController::class, 'create'])->name('member.create');
-    Route::get('/member-edit-{id}', [MemberController::class, 'edit'])->name('member.edit');
+    Route::get('/member-edit-{id}', [MemberController::class, 'edit'])->name('editMember');
     Route::get('/member-{id}', [App\Http\Controllers\Admin\MemberController::class, 'destroy'])->name('deleteMember');
     // Route::patch('/member-update-{id}', [MemberController::class, 'edit'])->name('member.update');
 
+    // Route::resource('member-transaction', MemberTransactionsController::class);
+    Route::get('/member-transactions', [MemberTransactionsController::class, 'index'])->name('mtIndex');
+    // Route::get('/member-transactions', [MemberTransactionsController::class, 'index'])->name('member-transactions-index');
+    // Route::get('/member-transactions-create', [MemberTransactionsController::class, 'create'])->name('member-transactions.create');
+    // Route::get('/member-transactions-edit-{id}', [MemberTransactionsController::class, 'edit'])->name('member-transactions.edit');
+    // Route::get('/member-transactions-{id}', [App\Http\Controllers\Admin\MemberTransactionsController::class, 'destroy'])->name('deleteMemberTransactions');
+
     Route::get('/personal-trainer', [PersonalTrainerController::class, 'index'])->name('personal-trainer-index');
+    Route::get('/customer-service', [CustomerServiceController::class, 'index'])->name('customer-service-index');
+    Route::get('/my-package', [MyPackageController::class, 'index'])->name('my-package');
 });
 
 

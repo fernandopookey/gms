@@ -36,7 +36,7 @@
                                         <td>
                                             <div class="trans-list">
                                                 @if ($item->count())
-                                                    <img src="{{ Storage::url($item->photos ?? '') }}" class="lazyload"
+                                                    <img src="{{ asset($item->photos ?? '') }}" class="lazyload"
                                                         width="150" alt="image">
                                                 @else
                                                     <img src="{{ asset('default.png') }}" class="img-fluid"
@@ -60,10 +60,10 @@
                                             <h6>{{ $item->description }}</h6>
                                         </td>
                                         <td>
-                                            <a href="{{ route('editMember', $item->id) }}"
-                                                class="btn btn-warning btn-sm">Edit</a>
                                             {{-- <a href="{{ route('member.edit', ['id' => $item->id]) }}"
-                                                class="btn btn-warning" role="button">Edit</a> --}}
+                                                class="btn btn-warning btn-sm" role="button">Edit</a> --}}
+                                            <a href="{{ route('member.edit', ['id' => $item->id]) }}"
+                                                class="btn btn-warning" role="button">Edit</a>
                                             <a onclick="confirmDelete(this)"
                                                 data-url="{{ route('deleteMember', ['id' => $item->id]) }}"
                                                 class="btn btn-danger btn-sm" role="button">Hapus</a>
