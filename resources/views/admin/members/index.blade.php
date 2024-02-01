@@ -3,7 +3,7 @@
         <div class="row">
             <form action="#" method="POST" id="deleteMembersForm">
                 @csrf
-                @method('delete')
+                {{-- @method('delete') --}}
                 <div class="col-xl-12">
                     <div class="page-title flex-wrap justify-content-between">
                         {{-- <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal"
@@ -22,23 +22,21 @@
                                     <th>No</th>
                                     <th>Image</th>
                                     <th>Member Name</th>
-                                    <th>Member Code</th>
                                     <th>gender</th>
                                     <th>Phone Number</th>
                                     <th>Address</th>
                                     <th>Description</th>
-                                    <th>Staff</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($members as $item)
+                                @foreach ($users as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>
                                             <div class="trans-list">
                                                 @if ($item->count())
-                                                    <img src="{{ asset($item->photos ?? '') }}" class="lazyload"
+                                                    <img src="{{ Storage::url($item->photos ?? '') }}" class="lazyload"
                                                         width="150" alt="image">
                                                 @else
                                                     <img src="{{ asset('default.png') }}" class="img-fluid"
@@ -47,10 +45,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <h6>{{ $item->full_name }}</h6>
-                                        </td>
-                                        <td>
-                                            <h6>{{ $item->member_code }}</h6>
+                                            <h6>{{ $item->name }}</h6>
                                         </td>
                                         <td>
                                             <h6>{{ $item->gender }}</h6>
@@ -65,13 +60,10 @@
                                             <h6>{{ $item->description }}</h6>
                                         </td>
                                         <td>
-                                            <h6>{{ $item->users->name }}</h6>
-                                        </td>
-                                        <td>
+                                            <a href="{{ route('editMember', $item->id) }}"
+                                                class="btn btn-warning btn-sm">Edit</a>
                                             {{-- <a href="{{ route('member.edit', ['id' => $item->id]) }}"
-                                                class="btn btn-warning btn-sm" role="button">Edit</a> --}}
-                                            <a href="{{ route('member.edit', ['id' => $item->id]) }}"
-                                                class="btn btn-warning" role="button">Edit</a>
+                                                class="btn btn-warning" role="button">Edit</a> --}}
                                             <a onclick="confirmDelete(this)"
                                                 data-url="{{ route('deleteMember', ['id' => $item->id]) }}"
                                                 class="btn btn-danger btn-sm" role="button">Hapus</a>

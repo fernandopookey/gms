@@ -15,8 +15,7 @@ class MemberController extends Controller
     {
         $data = [
             'title'     => 'List Member',
-            'members'   => Member::get(),
-            'users'     => User::get(),
+            'users'   => User::where('role', 'MEMBER')->get(),
             'content'   => 'admin/members/index'
         ];
         return view('admin.layouts.wrapper', $data);
@@ -34,25 +33,20 @@ class MemberController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'full_name'     => 'required',
-            'member_code'   => 'required',
+            'name'          => 'required',
             'gender'        => 'required',
             'phone_number'  => 'nullable',
             'address'       => 'nullable',
             'description'   => 'nullable',
-            'photos'        => 'mimes:png,jpg,jpeg|max:2048'
+            'photos'        => 'mimes:png,jpg,jpeg|max:2048',
+            'email'         => 'required|email',
+            'role'          => '',
         ]);
 
+        $data['password'] = bcrypt($request->password);
 
         $data['user_id'] = Auth::user()->id;
-        $member = $request->member_code;
-        $memberCode = $member;
 
-        $existingRecord = Member::where('member_code', $memberCode)->first();
-
-        if ($existingRecord) {
-            return redirect()->back()->with('error', 'Code already exists');
-        }
 
         if ($request->hasFile('photos')) {
 
@@ -70,15 +64,16 @@ class MemberController extends Controller
         } else {
             $data['photos'] = $request->photos;
         }
-        Member::create($data);
+        // Member::create($data);
+        User::create($data);
         return redirect(route('member.index'))->with('success', 'Data Member Berhasil Di tambah');
     }
 
-    public function edit($id)
+    public function edit(string $id)
     {
         $data = [
             'title'     => 'Edit Member',
-            'member'    => Member::findOrFail($id),
+            'member'    => User::find($id),
             'content'   => 'admin/members/edit'
         ];
         return view('admin.layouts.wrapper', $data);
@@ -93,24 +88,10 @@ class MemberController extends Controller
             'phone_number'  => 'nullable',
             'address'       => 'nullable',
             'description'   => 'nullable',
-            'member_code'   => 'nullable',
             'photos'        => 'mimes:png,jpg,jpeg|max:2048'
         ]);
 
         $data['user_id'] = Auth::user()->id;
-
-        if (!isset($data['member_code'])) {
-            $data['member_code'] = $item->member_code;
-        } elseif ($data['member_code'] !== $item->member_code) {
-            $member = $data['member_code'];
-            $memberCode = $member;
-
-            $existingRecord = Member::where('member_code', $memberCode)->first();
-            if ($existingRecord && $existingRecord->id != $id) {
-                return redirect()->back()->with('error', 'Code already exists');
-            }
-            $data['member_code'] = $memberCode;
-        }
 
         if ($request->hasFile('photos')) {
 
@@ -135,8 +116,8 @@ class MemberController extends Controller
 
     public function destroy(string $id)
     {
-        $member = Member::findOrFail($id);
-        $member->delete();
+        $user = User::findOrFail($id);
+        $user->delete();
         return redirect(route('member.index'))->with('success', 'Data Member Berhasil Di hapus');
     }
 }

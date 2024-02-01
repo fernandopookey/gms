@@ -18,8 +18,8 @@
                         <div class="col-xl-6">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Full Name</label>
-                                <input type="text" name="full_name" value="{{ $member->full_name }}"
-                                    class="form-control" id="exampleFormControlInput1" autocomplete="off" required>
+                                <input type="text" name="name" value="{{ $member->name }}" class="form-control"
+                                    id="exampleFormControlInput1" autocomplete="off" required>
                             </div>
                         </div>
                         <div class="col-xl-6">
