@@ -5,18 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Member extends Model
+class PackageTransaction extends Model
 {
     use HasFactory;
+    protected $table = 'member_registrations';
 
     protected $fillable = [
-        'full_name',
-        'gender',
-        'phone_number',
-        'address',
+        'package_name',
+        'days',
+        'package_price',
+        'admin_price',
         'description',
-        'photos',
-        'user_id',
     ];
 
     public function users()

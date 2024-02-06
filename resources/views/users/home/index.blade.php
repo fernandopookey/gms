@@ -39,8 +39,10 @@
                 <div class="section-title">
                     <span>About Us</span>
                     <h2>WHO WE ARE</h2>
-                    <p style="color: white; font-size: 19px; margin-top: 20px">Founded by Gamelab Indonesia in 2011, GYM GAMELAB empowers people to become the best version of themselves.<br>
-                    Our team of expert trainers will uplift, inspire, and empower you using our modern equipment.</p>
+                    <p style="color: white; font-size: 19px; margin-top: 20px">Founded by Gamelab Indonesia in 2011, GYM
+                        GAMELAB empowers people to become the best version of themselves.<br>
+                        Our team of expert trainers will uplift, inspire, and empower you using our modern equipment.
+                    </p>
                 </div>
             </div>
         </div>
@@ -56,7 +58,8 @@
                 <div class="cs-item">
                     <span class="flaticon-033-juice"></span>
                     <h4>Healthy nutrition plan</h4>
-                    <p>We provide services to create a healthy food plan for you. Make sure your food has good nutrition.</p>
+                    <p>We provide services to create a healthy food plan for you. Make sure your food has good
+                        nutrition.</p>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
@@ -98,7 +101,8 @@
                     <div class="ci-text">
                         <span>STRENGTH</span>
                         <h5>Weightlifting</h5>
-                        <a type="button" data-bs-toggle="modal" data-bs-target="#Modal1" style="text-decoration: none; color: white"><i class="fa fa-angle-right"></i></a>
+                        <a type="button" data-bs-toggle="modal" data-bs-target="#Modal1"
+                            style="text-decoration: none; color: white"><i class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -110,7 +114,8 @@
                     <div class="ci-text">
                         <span>Cardio</span>
                         <h5>Indoor cycling</h5>
-                        <a type="button" data-bs-toggle="modal" data-bs-target="#Modal2" style="text-decoration: none; color: white"><i class="fa fa-angle-right"></i></a>
+                        <a type="button" data-bs-toggle="modal" data-bs-target="#Modal2"
+                            style="text-decoration: none; color: white"><i class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -122,7 +127,8 @@
                     <div class="ci-text">
                         <span>STRENGTH</span>
                         <h5>Kettlebell power</h5>
-                        <a type="button" data-bs-toggle="modal" data-bs-target="#Modal3" style="text-decoration: none; color: white"><i class="fa fa-angle-right"></i></a>
+                        <a type="button" data-bs-toggle="modal" data-bs-target="#Modal3"
+                            style="text-decoration: none; color: white"><i class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -134,7 +140,8 @@
                     <div class="ci-text">
                         <span>Cardio</span>
                         <h4>Skipping</h4>
-                        <a type="button" data-bs-toggle="modal" data-bs-target="#Modal4" style="text-decoration: none; color: white"><i class="fa fa-angle-right"></i></a>
+                        <a type="button" data-bs-toggle="modal" data-bs-target="#Modal4"
+                            style="text-decoration: none; color: white"><i class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -146,7 +153,8 @@
                     <div class="ci-text">
                         <span>Training</span>
                         <h4>Boxing</h4>
-                        <a type="button" data-bs-toggle="modal" data-bs-target="#Modal5" style="text-decoration: none; color: white"><i class="fa fa-angle-right"></i></a>
+                        <a type="button" data-bs-toggle="modal" data-bs-target="#Modal5"
+                            style="text-decoration: none; color: white"><i class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -155,80 +163,91 @@
         <!-- Modal 1 -->
         <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="ModalLabel1" aria-hidden="true">
             <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h1 class="modal-title fs-5" id="ModalLabel1">Weightlifting</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="ModalLabel1">Weightlifting</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Lifting weights itself is a form of sport or strength training that requires excellent
+                            coordination,
+                            balance, balance, speed and of course strength. Lifting weights is a great way to enhance
+                            your cardio training.</p>
+                    </div>
                 </div>
-                <div class="modal-body">
-                <p>Lifting weights itself is a form of sport or strength training that requires excellent coordination,
-                    balance, balance, speed and of course strength. Lifting weights is a great way to enhance your cardio training.</p>
-                </div>
-            </div>
             </div>
         </div>
 
         <!-- Modal 2 -->
         <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="ModalLabel2" aria-hidden="true">
             <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h1 class="modal-title fs-5" id="ModalLabel2">Indoor Cycling</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="ModalLabel2">Indoor Cycling</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Indoor cycling is a rhythmic and dynamic cardiovascular workout that engages the entire body.
+                            By pedaling to the beat, you elevate your heart rate and strengthen your cardiovascular
+                            system</p>
+                    </div>
                 </div>
-                <div class="modal-body">
-                <p>Indoor cycling is a rhythmic and dynamic cardiovascular workout that engages the entire body.
-                    By pedaling to the beat, you elevate your heart rate and strengthen your cardiovascular system</p>
-                </div>
-            </div>
             </div>
         </div>
 
         <!-- Modal 3 -->
         <div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="ModalLabel3" aria-hidden="true">
             <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h1 class="modal-title fs-5" id="ModalLabel3">Kettlebell Power</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="ModalLabel3">Kettlebell Power</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Like dumbbells, though, kettlebells are effective ways to build strength, since you can
+                            continually challenge your muscles with them by adding more weight or increasing
+                            repetitions.</p>
+                    </div>
                 </div>
-                <div class="modal-body">
-                <p>Like dumbbells, though, kettlebells are effective ways to build strength, since you can
-                    continually challenge your muscles with them by adding more weight or increasing repetitions.</p>
-                </div>
-            </div>
             </div>
         </div>
 
         <!-- Modal 4 -->
         <div class="modal fade" id="Modal4" tabindex="-1" aria-labelledby="ModalLabel4" aria-hidden="true">
             <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h1 class="modal-title fs-5" id="ModalLabel4">Skipping</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="ModalLabel4">Skipping</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Skipping is a sport that is believed to be effective for increasing height and losing weight.
+                            Skipping is an activity using a rope that is held with both hands and then swung from head
+                            to toe while jumping over it.</p>
+                    </div>
                 </div>
-                <div class="modal-body">
-                <p>Skipping is a sport that is believed to be effective for increasing height and losing weight.
-                    Skipping is an activity using a rope that is held with both hands and then swung from head to toe while jumping over it.</p>
-                </div>
-            </div>
             </div>
         </div>
 
         <!-- Modal 5 -->
         <div class="modal fade" id="Modal5" tabindex="-1" aria-labelledby="ModalLabel5" aria-hidden="true">
             <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h1 class="modal-title fs-5" id="ModalLabel5">Boxing</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="ModalLabel5">Boxing</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Boxing is a sport and martial art in which two participants of similar weight compete against
+                            each other using their
+                            fists in a series of matches at one or three minute intervals called rounds.</p>
+                    </div>
                 </div>
-                <div class="modal-body">
-                <p>Boxing is a sport and martial art in which two participants of similar weight compete against each other using their
-                    fists in a series of matches at one or three minute intervals called rounds.</p>
-                </div>
-            </div>
             </div>
         </div>
 

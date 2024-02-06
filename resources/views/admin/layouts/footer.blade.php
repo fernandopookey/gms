@@ -52,34 +52,34 @@
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
   <script src="{{ 'addmin/dist/js/pages/dashboard.js' }}"></script>
 
-  
+
   @yield('addJavascript')
 
-  
+
 
   <script>
-    $(document).ready(function() {
-    var currentUrl = window.location.href;
-    var sidebarLinks = $('.nav-sidebar a');
+      $(document).ready(function() {
+          var currentUrl = window.location.href;
+          var sidebarLinks = $('.nav-sidebar a');
 
-    sidebarLinks.each(function() {
-        var linkUrl = $(this).attr('href');
+          sidebarLinks.each(function() {
+              var linkUrl = $(this).attr('href');
 
-        if (currentUrl.includes(linkUrl)) {
-            $(this).addClass('active');
-            $(this).closest('.nav-treeview').siblings('.nav-link').addClass('active');
-            $(this).closest('.has-treeview').addClass('menu-open');
-            return false; // Stop iteration once a matching link is found
-        }
-    });
-});
+              if (currentUrl.includes(linkUrl)) {
+                  $(this).addClass('active');
+                  $(this).closest('.nav-treeview').siblings('.nav-link').addClass('active');
+                  $(this).closest('.has-treeview').addClass('menu-open');
+                  return false; // Stop iteration once a matching link is found
+              }
+          });
+      });
   </script>
 
   <script src="//code.jquery.com/jquery-3.7.0.js"></script>
   <script src="//cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
   <script src="//cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
   <script>
-    new DataTable('#example');
+      new DataTable('#example');
   </script>
 
 
@@ -130,9 +130,6 @@
           })
       }
   </script>
-
-<<<<<<< HEAD
-=======
   <script>
       var currentUrl = window.location.href;
 
@@ -177,8 +174,6 @@
           });
       });
   </script>
-
->>>>>>> 8b1b25cc4006a8c21156f283a99032982045a288
   </body>
 
   </html>

@@ -37,8 +37,8 @@
                       <div class="fa-logo">
                           <a href="#"><img src="{{ asset('gym/img/logo.png') }}" alt=""></a>
                       </div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                          labore dolore magna aliqua endisse ultrices gravida lorem.</p>
+                      <p>Founded by Gamelab Indonesia in 2011, GYM
+                          GAMELAB empowers people to become the best version of themselves.</p>
                       <div class="fa-social">
                           <a href="#"><i class="fa fa-facebook"></i></a>
                           <a href="#"><i class="fa fa-twitter"></i></a>
@@ -130,41 +130,44 @@
   <script src="{{ asset('gym/js/owl.carousel.min.js') }}"></script>
   <script src="{{ asset('gym/js/main.js') }}"></script>
 
-<<<<<<< HEAD
-  <script>
-    function redirectToHomeWithTeam() {
-        window.location.href = "{{ route('home') }}#team";
-=======
   <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
-  <script>
-    function redirectToHomeWithHero() {
-        console.log("Mengarahkan ke halaman utama dengan hero");
-        window.location.href = "{{ route('home') }}#hero";
-    }
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
   </script>
 
   <script>
-    function redirectToHomeWithAbout() {
-        console.log("Mengarahkan ke halaman utama dengan about");
-        window.location.href = "{{ route('home') }}#about";
-    }
+      function redirectToHomeWithHero() {
+          console.log("Mengarahkan ke halaman utama dengan hero");
+          window.location.href = "{{ route('home') }}#hero";
+      }
   </script>
 
   <script>
-    function redirectToHomeWithClass() {
-        console.log("Mengarahkan ke halaman utama dengan our class");
-        window.location.href = "{{ route('home') }}#ourclass";
-    }
+      function redirectToHomeWithAbout() {
+          console.log("Mengarahkan ke halaman utama dengan about");
+          window.location.href = "{{ route('home') }}#about";
+      }
   </script>
 
   <script>
-    function redirectToHomeWithPackages() {
-        console.log("Mengarahkan ke halaman utama dengan packages");
-        window.location.href = "{{ route('home') }}#packages";
->>>>>>> origin
-    }
+      function redirectToHomeWithClass() {
+          console.log("Mengarahkan ke halaman utama dengan our class");
+          window.location.href = "{{ route('home') }}#ourclass";
+      }
+  </script>
+
+  <script>
+      function redirectToHomeWithPackages() {
+          console.log("Mengarahkan ke halaman utama dengan packages");
+          window.location.href = "{{ route('home') }}#packages";
+      }
+  </script>
+
+  <script>
+      function redirectToHomeWithTeam() {
+          console.log("Mengarahkan ke halaman utama dengan team");
+          window.location.href = "{{ route('home') }}#team";
+      }
   </script>
 
 

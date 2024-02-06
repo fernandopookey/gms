@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;use App\Models\PersonalTrainer;
+use App\Http\Controllers\Controller;
+use App\Models\PersonalTrainer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,7 +16,6 @@ class PersonalTrainerController extends Controller
             'title' => 'Personal Trainer',
             'content' => 'admin/personal-trainer/index',
             'personal_trainers' => PersonalTrainer::all(),
->>>>>>> 73cf6c69eb5d1a1fd51edb67521cad4d3a446a98
         ];
 
         // Mengembalikan view dengan data yang telah diset
@@ -45,7 +45,7 @@ class PersonalTrainerController extends Controller
             'address' => 'required',
         ]);
 
-        $data['user_id']=Auth::user()->id;
+        $data['user_id'] = Auth::user()->id;
 
         // Menambahkan nilai role secara otomatis
         $validatedData['role'] = 'Personal Trainer';
@@ -64,13 +64,13 @@ class PersonalTrainerController extends Controller
     public function edit(string $id)
     {
         $personalTrainer = PersonalTrainer::findOrFail($id);
-    
+
         $data = [
             'title' => 'Edit Personal Trainer',
             'content' => 'admin/personal-trainer/edit',
             'personalTrainer' => $personalTrainer,
         ];
-    
+
         return view('admin.layouts.wrapper', $data);
     }
 

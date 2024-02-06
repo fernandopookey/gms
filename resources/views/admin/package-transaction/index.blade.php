@@ -59,16 +59,12 @@
                             <h6>{{ $item->description }}</h6>
                         </td>
                         <td>
-                            <a href="{{ route('editMember', $item->id) }}" class="btn btn-warning btn-sm">
-                                <i class="fas fa-pencil-alt"></i>
-                            </a>
+                            <a href="{{ route('editMember', $item->id) }}" class="btn btn-warning btn-sm">Edit</a>
                             {{-- <a href="{{ route('member.edit', ['id' => $item->id]) }}"
                                                 class="btn btn-warning" role="button">Edit</a> --}}
                             <a onclick="confirmDelete(this)"
                                 data-url="{{ route('deleteMember', ['id' => $item->id]) }}"
-                                class="btn btn-danger btn-sm" role="button">
-                                <i class="fas fa-trash-alt"></i>
-                            </a>
+                                class="btn btn-danger btn-sm" role="button">Hapus</a>
                             {{-- <a onclick="confirmDelete(this)"
                                                 data-url="{{ route('member.destroy', ['id' => $item->id]) }}"
                                                 class="btn btn-danger btn-sm" role="button">Hapus</a> --}}
